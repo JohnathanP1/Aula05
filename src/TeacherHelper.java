@@ -3,14 +3,17 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static final double horaAula=17.50;
+	
+	// Vamos subistituir essa constante por uma variável
+	//public static final double horaAula=
 	
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
-		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos,horaAula;
+		
 		
 	
-		Random gerador = new Random();
+		Random gerador = new Random();//Criando um gerador de números pseudoaleatórios
 		
 		Scanner leitor = new Scanner(System.in);
 		
@@ -22,13 +25,16 @@ public class TeacherHelper {
 			System.out.println("3 - Exibir a motivação do dia!");
 			opcao = leitor.nextInt();
 			
-			switch (opcao) {
+			switch (gerador.nextInt(7)) {
+			case 0:
+				System.out.println("Seus alunos da imersão acham que voce tem a altura do Darth Vader!");
+			     break; 
 			case 1:
 				/*O salário dos professores de escolas particulares em
 				 * São Paulo é composto da seguinte forma 
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
-				numeroAulas = leitor.nextInt();
+				numeroAulas = leitor.nextInt(); {
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
