@@ -3,12 +3,13 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static double horaAula=17.50;
+	public static final double horaAula=17.50;
 	
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
 		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
 		
+	
 		Random gerador = new Random();
 		
 		Scanner leitor = new Scanner(System.in);
